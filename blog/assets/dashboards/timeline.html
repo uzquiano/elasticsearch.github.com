@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <title>ElasticSearch Date Histogram Facet As Timeline</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- Load JS libraries -->
+  <script src="jquery-1.5.1.min.js"></script>
+  <script src="protovis-r3.2.js"></script>
+  <script src="timeline.js"></script>
+  <style>
+  </style>
+  <script>
+    $( function() {
+      var timeline = [ {
+              "time" : 1293840000000,
+              "count" : 1
+              }, {
+              "time" : 1293926400000,
+              "count" : 2
+              }, {
+              "time" : 1294012800000,
+              "count" : 1
+              }, {
+              "time" : 1294099200000,
+              "count" : 4
+              }, {
+              "time" : 1294617600000,
+              "count" : 1
+              }, {
+              "time" : 1294790400000,
+              "count" : 1
+              }, {
+              "time" : 1294876800000,
+              "count" : 1
+              }, {
+              "time" : 1294963200000,
+              "count" : 2
+              }, {
+              "time" : 1295049600000,
+              "count" : 1
+              }, {
+              "time" : 1295481600000,
+              "count" : 2
+              }, {
+              "time" : 1295568000000,
+              "count" : 1
+              }, {
+              "time" : 1295654400000,
+              "count" : 1
+              }, {
+              "time" : 1295740800000,
+              "count" : 1
+              }, {
+              "time" : 1295827200000,
+              "count" : 1
+            } ];
+      Timeline('timeline-chart').data(timeline).draw();
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Placeholder for the chart -->
+  <div id="timeline-chart"></div>
+
+</body>
+</html>

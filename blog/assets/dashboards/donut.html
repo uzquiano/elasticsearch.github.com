@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <title>ElasticSearch Terms Facet Donut Chart</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- Load JS libraries -->
+  <script src="jquery-1.5.1.min.js"></script>
+  <script src="protovis-r3.2.js"></script>
+  <script src="donut.js"></script>
+  <script>
+    $( function() {
+      var terms = [ { "term" : "search", "count" : 4 },
+                    { "term" : "java",   "count" : 2 },
+                    { "term" : "ruby",   "count" : 1 },
+                    { "term" : "erlang", "count" : 1 }
+                  ];
+      Donut('donut-chart').data(terms).draw();
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Placeholder for the chart -->
+  <div id="donut-chart"></div>
+
+</body>
+</html>
